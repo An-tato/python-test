@@ -1,0 +1,35 @@
+/* Simple styles for the dummy site */
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --text:#111827;
+  --accent:#2563eb;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+.site-header{background:transparent;padding:0.75rem 0}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand{margin:0;font-size:1.25rem}
+nav a{margin-right:1rem;color:var(--text);text-decoration:none}
+nav button{padding:0.4rem 0.6rem;border:1px solid #ddd;background:#fff;border-radius:6px;cursor:pointer}
+.hero{padding:3rem 0;text-align:center}
+.hero h2{margin:0 0 0.5rem;font-size:1.75rem}
+.cta{display:inline-block;margin-top:1rem;padding:0.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0}
+.features article{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.06)}
+.about{background:var(--card);padding:1rem;border-radius:8px}
+.site-footer{padding:1rem 0;margin-top:2rem;color:#374151}
+
+/* Dark theme toggle */
+body.dark{--bg:#0b1220;--card:#0f1724;--text:#e6eef8;--accent:#4f46e5}
+
+@media (max-width:600px){
+  .hero h2{font-size:1.25rem}
+}
